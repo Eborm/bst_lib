@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bst_lib
+namespace bst_lib_namespace
 {
     internal class detection
     {
@@ -62,6 +63,20 @@ namespace bst_lib
                     break;
             }
             return direction;
+        }
+    }
+
+    internal class sleepingbeauty
+    {
+        public void NOP(double durationSeconds)
+        {
+            var durationTicks = Math.Round(durationSeconds * Stopwatch.Frequency);
+            var sw = Stopwatch.StartNew();
+
+            while (sw.ElapsedTicks < durationTicks)
+            {
+
+            }
         }
     }
 }

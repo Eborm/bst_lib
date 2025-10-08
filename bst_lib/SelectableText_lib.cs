@@ -2,9 +2,9 @@
 using System.Security.Cryptography.X509Certificates;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace bst_lib_namespace
+namespace SelectableText_lib_namespace
 {
-    public class bst_lib
+    public class SelectableText_lib
     {
         //console colors
         private System.ConsoleColor BackgroundColor;
@@ -72,7 +72,7 @@ namespace bst_lib_namespace
         private List<int> selectable_text = new List<int> {};
 
 
-        public bst_lib(System.ConsoleColor BackgroundColor = ConsoleColor.Black, System.ConsoleColor ForegroundColor = ConsoleColor.White)
+        public SelectableText_lib(System.ConsoleColor BackgroundColor = ConsoleColor.Black, System.ConsoleColor ForegroundColor = ConsoleColor.White)
         {
             this.add_text("");
             this.BackgroundColor = BackgroundColor;
@@ -89,7 +89,7 @@ namespace bst_lib_namespace
             Console.Clear();
         }
 
-        public bst_lib(bool disable_startup_animation, System.ConsoleColor BackgroundColor = ConsoleColor.Black, System.ConsoleColor ForegroundColor = ConsoleColor.White)
+        public SelectableText_lib(bool disable_startup_animation, System.ConsoleColor BackgroundColor = ConsoleColor.Black, System.ConsoleColor ForegroundColor = ConsoleColor.White)
         {
             this.add_text("");
             this.BackgroundColor = BackgroundColor;

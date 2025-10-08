@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bst_lib_namespace
+namespace SelectableText_lib_namespace
 {
     internal class detection
     {

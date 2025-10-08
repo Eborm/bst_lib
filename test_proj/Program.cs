@@ -1,4 +1,4 @@
-﻿using bst_lib_namespace;
+﻿using SelectableText_lib_namespace;
 
 namespace test_proj
 {
@@ -6,15 +6,15 @@ namespace test_proj
     {
         static void Main(string[] args)
         {
-            bst_lib bst = new bst_lib(true ,ConsoleColor.Black, ConsoleColor.White);
-            bst.add_text("test", "Test [yes]", myfunction);
-            bst.add_text("test2", "Test 2 [no]", myfunction2);
-            bst.add_text("some text");
-            bst.add_text("some text2");
-            bst.set_shown_text(new List<int> {1, 0 ,2, 0, 3, 4});
+            SelectableText_lib st = new SelectableText_lib(true ,ConsoleColor.Black, ConsoleColor.White);
+            st.add_text("test", "Test [yes]", myfunction);
+            st.add_text("test2", "Test 2 [no]", myfunction2);
+            st.add_text("some text");
+            st.add_text("some text2");
+            st.set_shown_text(new List<int> {1, 0 ,2, 0, 3, 4});
             while (true)
             {
-                bst.display_text();
+                st.display_text();
             }
 
         }

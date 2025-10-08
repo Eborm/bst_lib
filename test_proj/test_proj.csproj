@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\bst_lib\SelectableText_lib.csproj" />
+    <ProjectReference Include="..\SelectableText_lib\SelectableText_lib.csproj" />
   </ItemGroup>
 
 </Project>

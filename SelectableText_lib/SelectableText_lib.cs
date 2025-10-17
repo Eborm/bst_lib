@@ -43,7 +43,7 @@ namespace SelectableText_lib_namespace
 
         //setting up the text functions
         private static Action voidfunct() { return () => { }; }
-        private Dictionary<int, Tuple<string, Action>> _TextDictonary = new Dictionary<int, Tuple<string, Action>> { };
+        private Dictionary<int, Tuple<string, Action>> _TextDictonary = new Dictionary<int, Tuple<string, Action>> {};
         private Dictionary<string, int> _TextKeyDictonary = new Dictionary<string, int> { { "empty", 0 } };
         private int selectedtext = -1;
         private int textcount = -1;
@@ -65,6 +65,7 @@ namespace SelectableText_lib_namespace
                 _sb.NOP(x);
             }
             _sb.NOP(0.5);
+            _TextDictonary[0] = new Tuple<string, Action> ("", voidfunct());
             Console.Clear();
         }
 
@@ -85,6 +86,7 @@ namespace SelectableText_lib_namespace
                 _sb.NOP(0.5);
                 Console.Clear();
             }
+            _TextDictonary[0] = new Tuple<string, Action>("", voidfunct());
         }
     
         public void add_text(string text)
@@ -92,7 +94,7 @@ namespace SelectableText_lib_namespace
             Action functionname = null;
             if (functionname == null) functionname = voidfunct();
             textcount++;
-            _TextDictonary.Add(textcount, new Tuple<string, Action>(text, null));
+            _TextDictonary.Add(textcount, new Tuple<string, Action>(text, functionname));
         }
         
         public void add_text(string text, Action functionname)
@@ -126,7 +128,7 @@ namespace SelectableText_lib_namespace
             if (write_this_text.Count == 0) { write_this_text.Add(0); }
             foreach ( int key in write_this_text)
             {
-                if (_TextDictonary[key] != null)
+                if (_TextDictonary[key].Item2 != voidfunct())
                 {
                     selectable_text.Add(key);
                 }

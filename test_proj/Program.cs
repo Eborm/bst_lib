@@ -6,7 +6,7 @@ namespace test_proj
     {
         static void Main(string[] args)
         {
-            SelectableText_lib st = new SelectableText_lib(true ,ConsoleColor.Black, ConsoleColor.White);
+            SelectableText_lib st = new SelectableText_lib(false ,ConsoleColor.Black, ConsoleColor.White);
             st.add_text("test", "Test [yes]", myfunction);
             st.add_text("test2", "Test 2 [no]", myfunction2);
             st.add_text("some text");
